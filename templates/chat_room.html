@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="chat-container">
+        <div id = "chat-display">
+        </div>
+        <form class = "chat-input-form">
+            <input id = "message-input" type="text" placeholder = "Enter your message...">
+            <button class = "send-button"><i class="far fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script type = "text/javascript" src="../static/main.js"></script>
+    <script>
+        var username = '{{data.username}}'
+        var room = '{{data.room}}'
+    </script>
+
+{% endblock content %}

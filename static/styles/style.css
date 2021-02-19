@@ -1,0 +1,232 @@
+:root{
+    --background-color : #F2F6FA;
+    --primary-color : #0041FD;
+    --secondary-color : #ffffff;
+    --text-color : #000000;
+    --shadow-color : #ccc;
+    --label-color : darkgrey;
+
+}
+
+/*Global*/
+html, body {
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+    font-size : 16px;
+}
+
+/*navigation*/
+.navbar{
+    background-color : var(--primary-color);
+    height : 50px;
+    width: 100%;
+}
+
+.navbar-container{
+    display : flex;
+    justify-content : space-between;
+    width : 80%;
+    margin : auto;
+    align-items : center;
+}
+
+.logo-container{
+    color : var(--background-color);
+}
+
+.link-container{
+    display : flex;
+    list-style : none;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.link{
+    margin-left : 10px;
+}
+
+.link a{
+    text-decoration : none;
+    color : var(--secondary-color);
+}
+
+.link a:hover{
+    cursor: pointer;
+    color : var(--background-color);
+}
+
+/*login page*/
+
+.login-form{
+    display : flex;
+    flex-direction : column;
+    width: 400px;
+    height: 370px;
+    margin: 150px auto;
+    box-shadow: 0px 2px 3px var(--shadow-color);
+    align-items : center;
+    box-sizing: border-box;
+    justify-content : center;
+    background-color : var(--background-color);
+}
+
+.login-logo{
+    color : var(--primary-color);
+}
+
+
+.login-form-label{
+    margin-bottom : 5px;
+}
+
+.login-input-container{
+    height: 100px;
+    display : flex;
+    flex-direction : column;
+    outline : none;
+    width: 350px;
+}
+
+.login-input{
+    width: 350px;
+    height : 40px;
+    border-radius : 5px;
+    padding : 5px 10px;
+    box-sizing: border-box;
+    border : 0;
+    outline : none;
+    font-size : inherit;
+
+}
+
+.login-button{
+    width : 150px;
+    padding : 8px 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border : 0;
+    outline : none;
+    background-color : var(--primary-color);
+    color : var(--secondary-color);
+    height: 40px;
+    font-size  :inherit;
+}
+
+.login-button:hover{
+    cursor: pointer;
+}
+
+
+/*Chat page*/
+
+.chat-container{
+    width: 90%;
+    margin : 15px auto;
+    background-color : var(--background-color);
+    height : 90vh;
+}
+
+#chat-display{
+    width: 100%;
+    height: 92%;
+    padding : 20px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow : scroll;
+    overflow-y : auto;
+}
+
+.user-info{
+    color : var(--label-color);
+    margin-bottom: 5px;
+    font-size : 12px;
+}
+
+.message-container-right{
+    float : right;
+}
+
+.message-container-left{
+    float : left;
+}
+
+.message-right{
+    border-radius: 10px;
+    box-sizing : border-box;
+    padding : 10px 15px;
+    color : var(--secondary-color);
+    background-color : var(--primary-color);
+    max-width: 360px;
+}
+
+.message-left{
+    border-radius: 10px;
+    box-sizing : border-box;
+    padding : 10px 15px;
+    color :  var(--text-color);
+    background-color : var(--secondary-color);
+    max-width: 360px;
+
+}
+
+.join-room-announcement{
+    text-align : center;
+}
+
+
+.chat-input-form{
+    width: 90%;
+    margin : 10px auto;
+    background-color : var(--secondary-color);
+    border-radius : 8px;
+    height : 50px;
+    display : flex;
+    justify-content:space-between;
+    box-shadow : 0 2px 3px var(--shadow-color);
+    align-items : center;
+}
+
+#message-input{
+    width: 80%;
+    height : 100%;
+    padding : 5px 10px;
+    box-sizing: border-box;
+    border : 0;
+    outline : none;
+    border-radius : 8px;
+    font-size : 16px;
+
+
+}
+
+.send-button{
+    padding : 12px 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border : 0;
+    outline : none;
+    background-color : var(--primary-color);
+    color :  var(--secondary-color);
+    height: 40px;
+    margin: 0px 15px;
+
+}
+
+.send-button:hover{
+    cursor : pointer;
+}
+
+.fa-paper-plane{
+    color : var(--secondary-color);
+    font-size : 16px;
+} 
+
+
+/* .alert .alert-info{
+    width : 50%;
+    margin : auto;
+    margin-top: 20px;
+    background-color : red;
+} */

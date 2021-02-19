@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-info" role="alert">
+                {{messages[0]}}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form class="login-form" method = "POST">
+        {{form.hidden_tag()}}
+        <h1 class = "login-logo">Connect.</h1>
+        <div class="login-input-container">
+            {{form.username.label(class_ = "login-form-label")}}
+            {{form.username(class_ = "login-input")}}      
+        </div>
+        <div class="login-input-container">
+            {{form.room.label(class_ = "login-form-label")}}
+            {{form.room(class_ = "login-input")}}   
+        </div>
+        {{form.submit(class_ = "login-button")}}
+
+    </form>
+{% endblock content %}
+
+<!-- <label class="login-form-label">Username</label>
+<input class = "login-input" type = "text" placeholder = "Username" value = ""/>
+
+
+
+<label class="login-form-label">Chat Room ID</label>
+<input class = "login-input" type = "text" placeholder = "Chat Room ID" value = ""/>     -->
+
+<!-- <button class="login-button">Login</button> -->
+
