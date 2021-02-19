@@ -36,7 +36,7 @@ const addMessage = (data) => {
 
 //"http://" + document.domain + ":" + location.port)
 
-var socket = io("http://" + document.domain + ":" + location.port);
+var socket = io().connect(window.location.protocol + "//" + document.domain + ":" + location.port);
 
 socket.on('connect', function (){
 
