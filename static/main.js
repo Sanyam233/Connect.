@@ -35,7 +35,7 @@ const addMessage = (data) => {
 // http://127.0.0.1:5000
 
 
-var socket = io.connect("https://connect-001.herokuapp.com/chat");
+var socket = io.connect("http://" + document.domain + ":" + location.port);
 
 socket.on('connect', function (){
 
