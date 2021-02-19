@@ -13,7 +13,7 @@ app.config["SECRET_KEY"] = "this"
 
 # db = SQLAlchemy(app)
 
-socketio = SocketIO(app)
+socketio = SocketIO(app,cors_allowed_origins='http://connect-001.herokuapp.com/')
 
 @app.route('/', methods=["POST", "GET"])
 def login():
