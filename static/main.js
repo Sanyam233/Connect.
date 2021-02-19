@@ -34,8 +34,9 @@ const addMessage = (data) => {
 
 // http://127.0.0.1:5000
 
+//"http://" + document.domain + ":" + location.port)
 
-var socket = io.connect("http://" + document.domain + ":" + location.port);
+var socket = io();
 
 socket.on('connect', function (){
 
