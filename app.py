@@ -58,18 +58,18 @@ def logout():
 def on_join(data):
     room = data["room"]
     join_room(room)
-    socketio.emit('join_room_announcement', data,broadcast = True, room = room)
+    socketio.emit('join_room_announcement', data, room = room)
 
 @socketio.on('leave')
 def on_join(data):
     room = data["room"]
     leave_room(room)
-    socketio.emit('leave_room_announcement', data,broadcast = True)
+    socketio.emit('leave_room_announcement', data)
 
 @socketio.on('message')
 def handle_message(data):
     room = data["room"]
-    socketio.emit('recieve_message',data,broadcast = True, room = room)
+    socketio.emit('recieve_message',data, room = room)
 
 
 if __name__ == '__main__':
