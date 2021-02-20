@@ -40,6 +40,8 @@ var socket = io().connect(window.location.protocol + "//" + document.domain + ":
 
 socket.on('connect', function (){
 
+    console.log(username, room);
+
 
     if (username !== ""){
         socket.emit('join', {
