@@ -77,12 +77,14 @@ socket.on('connect', function (){
 
 socket.on('join_room_announcement', function(data){
     const joinedMessage = document.createElement('div');
+    console.log(data.username);
     joinedMessage.innerHTML = `<p class="join-room-announcement">*<b>${data.username}</b> has joined chat room ${data.room}*</p>`;
     document.getElementById('chat-display').appendChild(joinedMessage);
 });
 
 socket.on('recieve_message', function(data){
     const message = document.createElement('div');
+    console.log(data);
     message.innerHTML = addMessage(data);
     document.getElementById('chat-display').appendChild(message);
 });
